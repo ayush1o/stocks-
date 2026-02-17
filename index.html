@@ -1,319 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment Excellence | Fidelity Concept</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-green: #2f7d2f;
-            --dark-green: #1e521e;
-            --light-bg: #f8fafc;
-            --text-main: #1a202c;
-            --text-muted: #4a5568;
-            --white: #ffffff;
-            --transition: all 0.3s ease;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fidelity Mobile | Stock & Investment</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            background: var(--light-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+<style>
+:root{
+    --accent-red:#0f9d58;
+    --accent-dark:#0b7d46;
+    --bg:#ececec;
+    --text:#10131a;
+    --muted:#6b7280;
+    --white:#ffffff;
+    --positive:#0f9d58;
+    --negative:#d93025;
+}
 
-        /* ===== NAVIGATION ===== */
-        .navbar {
-            background: var(--white);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Inter',sans-serif;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-green);
-            letter-spacing: -0.5px;
-        }
+body{
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    padding:.4rem;
+}
 
-        .nav-actions {
-            display: flex;
-            gap: 12px;
-        }
+.phone-shell{
+    width:100%;
+    max-width:430px;
+    min-height:100vh;
+    background:var(--bg);
+    border:1px solid #d8d8d8;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
 
-        /* ===== BUTTONS ===== */
-        .btn {
-            padding: 10px 24px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
+/* ===== TOP NAV ===== */
+.top-nav{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.2rem 1rem;
+}
 
-        .btn-primary { background: var(--primary-green); color: var(--white); }
-        .btn-primary:hover { background: var(--dark-green); transform: translateY(-1px); }
+.brand{
+    font-size:2rem;
+    color:var(--accent-red);
+    font-weight:800;
+}
 
-        .btn-outline { 
-            background: transparent; 
-            border: 1.5px solid var(--primary-green); 
-            color: var(--primary-green); 
-        }
-        .btn-outline:hover { background: #f0fdf4; }
+.top-icons{
+    display:flex;
+    gap:.8rem;
+    font-size:1.3rem;
+}
 
-        /* ===== HERO SECTION ===== */
-        .hero {
-            position: relative;
-            min-height: 500px;
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                        url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            padding: 40px 5%;
-        }
+/* ===== HERO ===== */
+.hero{
+    background:var(--accent-red);
+    color:white;
+    padding:1.6rem 1rem;
+}
 
-        .hero-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 24px;
-            max-width: 550px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
+.hero h1{
+    font-size:2rem;
+    margin-bottom:.6rem;
+}
 
-        .hero-card h1 {
-            font-size: 2.5rem;
-            color: var(--text-main);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
+.hero p{
+    color:#e8f8ef;
+    margin-bottom:1rem;
+}
 
-        .hero-card p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
+.hero-actions{
+    display:flex;
+    gap:.6rem;
+}
 
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-        }
+.btn{
+    border-radius:14px;
+    padding:.8rem 1.2rem;
+    font-weight:700;
+    text-decoration:none;
+}
 
-        /* ===== CONTENT SECTION ===== */
-        .section {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.btn-light{
+    background:white;
+    color:var(--accent-red);
+}
 
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+.btn-outline{
+    border:2px solid #ccefdc;
+    color:white;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+/* ===== SECTION ===== */
+.section{
+    padding:1.2rem 1rem;
+    flex:1;
+}
 
-        .card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: var(--transition);
-            border: 1px solid #edf2f7;
-        }
+.section h2{
+    font-size:1.6rem;
+    margin-bottom:.8rem;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.07);
-        }
+/* ===== CAROUSEL ===== */
+.carousel{
+    overflow:hidden;
+    border-radius:18px;
+    background:white;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.slides{
+    display:flex;
+    transition:transform .7s ease;
+}
 
-        .card-body {
-            padding: 24px;
-        }
+.slide{
+    min-width:100%;
+    padding:1.2rem;
+}
 
-        .card-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--primary-green);
-            margin-bottom: 8px;
-            display: block;
-        }
+.slide-head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:.5rem;
+}
 
-        .card h3 {
-            margin-bottom: 12px;
-            font-size: 1.25rem;
-        }
+.price.up{color:var(--positive);}
+.price.down{color:var(--negative);}
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+.slide p{
+    color:var(--muted);
+    margin-bottom:.6rem;
+}
 
-        /* ===== FOOTER ===== */
-        footer {
-            background: #1a202c;
-            color: #e2e8f0;
-            padding: 60px 5% 30px;
-        }
+.chips{
+    display:flex;
+    gap:.4rem;
+    flex-wrap:wrap;
+}
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+.chip{
+    background:#eef2ff;
+    padding:.3rem .6rem;
+    border-radius:999px;
+    font-size:.75rem;
+}
 
-        .footer-col h4 {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
+/* ===== DOTS ===== */
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:.4rem;
+    padding:.6rem;
+}
 
-        .footer-col ul {
-            list-style: none;
-        }
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#c5c5c5;
+}
 
-        .footer-col ul li {
-            margin-bottom: 10px;
-        }
+.dot.active{
+    background:var(--accent-red);
+}
 
-        .footer-col a {
-            color: #a0aec0;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
+/* ===== BOTTOM NAV ===== */
+.bottom-nav{
+    background:white;
+    border-top:1px solid #ddd;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding:.7rem;
+}
 
-        .footer-col a:hover { color: var(--white); }
+.bottom-item{
+    text-align:center;
+    text-decoration:none;
+    color:#777;
+    font-weight:600;
+}
 
-        .footer-bottom {
-            border-top: 1px solid #2d3748;
-            padding-top: 30px;
-            font-size: 0.8rem;
-            color: #718096;
-            text-align: center;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .hero { text-align: center; padding: 20px; justify-content: center; }
-            .hero-btns { flex-direction: column; }
-            .nav-actions { flex-wrap: wrap; justify-content: flex-end; }
-            .hero-card h1 { font-size: 1.8rem; }
-            .nav-actions .btn { padding: 8px 15px; font-size: 0.8rem; }
-        }
-    </style>
+.bottom-item.active{
+    color:var(--accent-red);
+}
+</style>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">FIDELITY</div>
-        <div class="nav-actions">
-            <a class="btn btn-outline" href="nextpage.html">Log In</a>
-            <a class="btn btn-primary" href="nextpage.html">Open Account</a>
-        </div>
-    </nav>
+<div class="phone-shell">
 
-    <section class="hero">
-        <div class="hero-card">
-            <h1>Transferring assets shouldn't be work.</h1>
-            <p>Experience a seamless transition. Whether it's an old 401(k) or existing brokerage assets, we handle the heavy lifting so you can focus on your goals.</p>
-            <div class="hero-btns">
-                <a class="btn btn-primary" href="nextpage.html">Get Started</a>
-                <button class="btn btn-outline">Learn About Transfers</button>
-            </div>
-        </div>
-    </section>
+<header class="top-nav">
+    <div class="brand">Fidelix</div>
+    <div class="top-icons">
+        🔔 🛡️ 💬 👤
+    </div>
+</header>
 
-    <section class="section">
-        <h2>Expertise you can act on</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="HSA tips">
-                <div class="card-body">
-                    <span class="card-tag">Article • 6 min</span>
-                    <h3>3 ways to use your health savings account</h3>
-                    <p>Maximize your tax-advantaged growth and understand how to leverage your HSA for long-term wealth.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80" alt="Market insights">
-                <div class="card-body">
-                    <span class="card-tag">Webinar • 24 min</span>
-                    <h3>Market Sense: Weekly Insights</h3>
-                    <p>Join our experts as they break down the week's biggest headlines and what they mean for your portfolio.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=400&q=80" alt="Investing basics">
-                <div class="card-body">
-                    <span class="card-tag">Guide • 10 min</span>
-                    <h3>How to start investing</h3>
-                    <p>From choosing an account to picking your first fund, we make the complex world of investing simple.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+    <h1>Start Investing Now</h1>
+    <p>Track live stocks, discover market news, and build your account with confidence.</p>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Accounts</h4>
-                <ul>
-                    <li><a href="#">Brokerage</a></li>
-                    <li><a href="#">Retirement/IRA</a></li>
-                    <li><a href="#">Planning & Advice</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>News & Research</h4>
-                <ul>
-                    <li><a href="#">Markets</a></li>
-                    <li><a href="#">Quotes</a></li>
-                    <li><a href="#">Learning Center</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Find an Investor Center</a></li>
-                    <li><a href="#">Accessibility</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024-2026 FMR LLC. All rights reserved.</p>
-            <p style="margin-top: 15px;">Investing involves risk, including risk of loss. Fidelity Brokerage Services LLC, Member NYSE, SIPC.</p>
-        </div>
-    </footer>
+    <div class="hero-actions">
+        <a href="nextpage.html" class="btn btn-light">Login</a>
+        <a href="nextpage.html" class="btn btn-outline">Open Account</a>
+    </div>
+</section>
+
+<section class="section">
+<h2>Stock Market Live Slides</h2>
+
+<div class="carousel">
+<div class="slides" id="slides">
+
+<div class="slide">
+<div class="slide-head">
+<h3>Apple (AAPL)</h3>
+<div class="price up">$214.22 ▲ 1.8%</div>
+</div>
+<p>Apple climbs after stronger iPhone demand signals.</p>
+<div class="chips"><span class="chip">Tech</span></div>
+</div>
+
+<div class="slide">
+<div class="slide-head">
+<h3>Tesla (TSLA)</h3>
+<div class="price down">$178.90 ▼ 0.9%</div>
+</div>
+<p>EV stocks pull back amid delivery concerns.</p>
+<div class="chips"><span class="chip">EV</span></div>
+</div>
+
+<div class="slide">
+<div class="slide-head">
+<h3>NIFTY 50</h3>
+<div class="price up">24,186 ▲ 0.6%</div>
+</div>
+<p>Indian index gains led by banking shares.</p>
+<div class="chips"><span class="chip">India</span></div>
+</div>
+
+</div>
+
+<div class="dots" id="dots"></div>
+</div>
+</section>
+
+<footer class="bottom-nav">
+<a class="bottom-item active" href="#">🏠 Home</a>
+<a class="bottom-item" href="#">📈 Invest</a>
+</footer>
+
+</div>
+
+<script>
+const slides=document.getElementById('slides');
+const items=[...slides.children];
+const dotsContainer=document.getElementById('dots');
+
+let index=0;
+
+items.forEach((_,i)=>{
+ const d=document.createElement('span');
+ d.className='dot'+(i===0?' active':'');
+ dotsContainer.appendChild(d);
+});
+
+const dots=[...dotsContainer.children];
+
+function go(i){
+ slides.style.transform=`translateX(-${i*100}%)`;
+ dots.forEach((d,di)=>d.classList.toggle('active',di===i));
+}
+
+setInterval(()=>{
+ index=(index+1)%items.length;
+ go(index);
+},3000);
+</script>
 
 </body>
 </html>
