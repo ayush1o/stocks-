@@ -64,6 +64,8 @@
             font-size: 0.9rem;
             transition: var(--transition);
             text-align: center;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary { background: var(--primary-green); color: var(--white); }
@@ -223,6 +225,7 @@
         @media (max-width: 768px) {
             .hero { text-align: center; padding: 20px; justify-content: center; }
             .hero-btns { flex-direction: column; }
+            .nav-actions { flex-wrap: wrap; justify-content: flex-end; }
             .hero-card h1 { font-size: 1.8rem; }
             .nav-actions .btn { padding: 8px 15px; font-size: 0.8rem; }
         }
@@ -233,8 +236,8 @@
     <nav class="navbar">
         <div class="logo">FIDELITY</div>
         <div class="nav-actions">
-            <button class="btn btn-outline">Log In</button>
-            <button class="btn btn-primary">Open Account</button>
+            <a class="btn btn-outline" href="nextpage.html">Log In</a>
+            <a class="btn btn-primary" href="nextpage.html">Open Account</a>
         </div>
     </nav>
 
@@ -243,7 +246,7 @@
             <h1>Transferring assets shouldn't be work.</h1>
             <p>Experience a seamless transition. Whether it's an old 401(k) or existing brokerage assets, we handle the heavy lifting so you can focus on your goals.</p>
             <div class="hero-btns">
-                <button class="btn btn-primary">Get Started</button>
+                <a class="btn btn-primary" href="nextpage.html">Get Started</a>
                 <button class="btn btn-outline">Learn About Transfers</button>
             </div>
         </div>
